@@ -1,0 +1,1043 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 Monaco;\f4\froman\fcharset0 Times-Roman;\f5\froman\fcharset0 Times-Italic;
+\f6\fnil\fcharset0 AppleSymbols;\f7\froman\fcharset0 TimesNewRomanPSMT;\f8\ftech\fcharset77 Symbol;
+\f9\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red57\green16\blue235;\red255\green255\blue255;\red19\green19\blue20;
+\red56\green56\blue56;\red164\green191\blue255;\red10\green12\blue22;\red252\green115\blue96;\red117\green255\blue242;
+\red17\green16\blue23;\red229\green227\blue232;\red23\green23\blue23;\red254\green219\blue112;\red129\green131\blue134;
+\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c29412\c20784\c93725;\cssrgb\c100000\c100000\c100000;\cssrgb\c9804\c9804\c10196;
+\cssrgb\c28235\c28235\c28235;\cssrgb\c70196\c80000\c100000;\cssrgb\c3922\c5490\c11373;\cssrgb\c100000\c53725\c45098;\cssrgb\c51373\c100000\c96078;
+\cssrgb\c8235\c7843\c12157;\cssrgb\c91765\c91373\c92941;\cssrgb\c11765\c11765\c11765;\cssrgb\c100000\c87843\c51373;\cssrgb\c57647\c58431\c59608;
+\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid201\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid301\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid302\'00;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid401\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh17700\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+1) supervised:\
+	+Regression:\
+		- Linear regression\
+		- K-nearest neighbors (KNN) regression\
+\
+	+Classification:\
+		- Naive Bayes\
+		- K- nearest neighbors (KNN) \
+		- Logistic regression\
+		- Support Vektor Machines (SVM)\
+		- Decision Trees\
+		- Random Forests\
+\
+2) unsupervised:\
+\
+	+ Cluster\
+		- K-means
+\fs24 \
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs28 \cf0 \'97 {\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"}}{\fldrslt 
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\ul \ulc2 Linear Regression}}
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\ul \ulc2 \
+Model hata kareler toplam\uc0\u305 n\u305  (HKT) minimum yapan b0 ve m katsayilarini bulup y=b0+mx seklinde bir denklem kuruyor. \
+Modeli fit ettiginde hkt de onemli bir degisiklik olmayincaya kadar b0 ve m de\uc0\u287 i\u351 kenlerini s\'fcrekli deneyerek optimum b0 ve m yi buluyor.\cf4 \ulnone \
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+\cf5 Import and create the model:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf6 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 from\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 sklearn\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 linear_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf6 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 import\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 LinearRegression\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 LinearRegression\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ()\
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf5 \cb3 \shad0 Fit:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf8 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 fit\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 x_training_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 y_training_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa120\partightenfactor0
+\ls1\ilvl0
+\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 \shad0 		\expnd0\expndtw0\kerning0
+.coef_
+\f2\fs38\fsmilli19200 \cf5 \cb3 : contains the coefficients\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
+\ls1\ilvl0
+\f3\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+.intercept_
+\f2\fs38\fsmilli19200 \cf5 \cb3 : contains the intercept\cb1 \
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b \cf5 \cb3 Predict:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf8 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predictions\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predict\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_x_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
+\ls2\ilvl0
+\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 \shad0 		\expnd0\expndtw0\kerning0
+.score()
+\f2\fs38\fsmilli19200 \cf5 \cb3 : returns the coefficient of determination R\'b2\
+\pard\tx566\pardeftab720\sl360\sa240\partightenfactor0
+\cf5 \cb1 Ornek-1:\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf8 \cb12 regr\cf3  = \cf8 linear_model\cf3 .\cf9 LinearRegression\cf3 ()\cb1 \
+\cf8 \cb12 regr\cf3 .\cf9 fit\cf3 (\cf8 X\cf3 ,\cf8 y\cf3 )\cb1 \
+\cb12 print(\cf8 regr\cf3 .\cf9 coef_\cf3 , \cf8 regr\cf3 .\cf9 intercept_\cf3 )\cb1 \
+\
+\cf8 \cb12 y_predict\cf3 = \cf8 regr\cf3 .\cf9 predict\cf3 (\cf8 X\cf3 )\cb1 \
+\
+\cf8 \cb12 plt\cf3 .\cf9 scatter\cf3 (\cf8 X\cf3 ,\cf8 y\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 plot\cf3 (\cf8 X\cf3 ,\cf8 y_predict\cf3 )\cb1 \
+\
+\
+\cf8 \cb12 X_future\cf3  = \cf8 np\cf3 .\cf9 array\cf3 (range(\cf8 2013\cf3 , \cf8 2050\cf3 ))\cb1 \
+\cf8 \cb12 X_future\cf3 =\cf8 X_future\cf3 .\cf9 reshape\cf3 (\cf8 -1\cf3 ,\cf8 1\cf3 )\cb1 \
+\
+\cf8 \cb12 future_predict\cf3 = \cf8 regr\cf3 .\cf9 predict\cf3 (\cf8 X_future\cf3 )\cb1 \
+\cb12 print(\cf8 future_predict\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 plot\cf3 (\cf8 X_future\cf3 ,\cf8 future_predict\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 show\cf3 ()
+\f2\fs38\fsmilli19200 \cf5 \cb1 \
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+\cf5 \cb3 \
+Ornek-2:\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf6 \cb12 import\cf3  \cf8 matplotlib\cf3 .\cf9 pyplot\cf3  \cf6 as\cf3  \cf8 plt\cf3 \cb1 \
+\cf6 \cb12 import\cf3  \cf8 pandas\cf3  \cf6 as\cf3  \cf8 pd\cf3 \cb1 \
+\
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 model_selection\cf3  \cf6 import\cf3  \cf8 train_test_split\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 linear_model\cf3  \cf6 import\cf3  \cf8 LinearRegression\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 streeteasy\cf3  = \cf8 pd\cf3 .\cf9 read_csv\cf3 (\cf13 "https://raw.githubusercontent.com/sonnynomnom/Codecademy-Machine-Learning-Fundamentals/master/StreetEasy/manhattan.csv"\cf3 )\cb1 \
+\
+\cf8 \cb12 df\cf3  = \cf8 pd\cf3 .\cf9 DataFrame\cf3 (\cf8 streeteasy\cf3 )\cb1 \
+\
+\cf8 \cb12 x\cf3  = \cf8 df\cf3 [[\cf13 'bedrooms'\cf3 , \cf13 'bathrooms'\cf3 , \cf13 'size_sqft'\cf3 , \cf13 'min_to_subway'\cf3 , \cf13 'floor'\cf3 , \cf13 'building_age_yrs'\cf3 , \cf13 'no_fee'\cf3 , \cf13 'has_roofdeck'\cf3 , \cf13 'has_washer_dryer'\cf3 , \cf13 'has_doorman'\cf3 , \cf13 'has_elevator'\cf3 , \cf13 'has_dishwasher'\cf3 , \cf13 'has_patio'\cf3 , \cf13 'has_gym'\cf3 ]]\cb1 \
+\
+\cf8 \cb12 y\cf3  = \cf8 df\cf3 [[\cf13 'rent'\cf3 ]]\cb1 \
+\
+\cf8 \cb12 x_train\cf3 , \cf8 x_test\cf3 , \cf8 y_train\cf3 , \cf8 y_test\cf3  = \cf8 train_test_split\cf3 (\cf8 x\cf3 , \cf8 y\cf3 , \cf8 train_size\cf3  = \cf8 0.8\cf3 , \cf8 test_size\cf3  = \cf8 0.2\cf3 , \cf8 random_state\cf3 =\cf8 6\cf3 )\cb1 \
+\
+\cf8 \cb12 mlr\cf3  = \cf8 LinearRegression\cf3 ()\cb1 \
+\
+\cf8 \cb12 model\cf3 =\cf8 mlr\cf3 .\cf9 fit\cf3 (\cf8 x_train\cf3 , \cf8 y_train\cf3 )\cb1 \
+\
+\cf8 \cb12 y_predict\cf3  = \cf8 mlr\cf3 .\cf9 predict\cf3 (\cf8 x_test\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Input code here:\cf3 \cb1 \
+\
+\cf14 \cb12 # train R2 si\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12 print(\cf13 "Train score:"\cf3 )\cb1 \
+\cb12 print(\cf8 mlr\cf3 .\cf9 score\cf3 (\cf8 x_train\cf3 , \cf8 y_train\cf3 ))\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # test R2 si\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12 print(\cf13 "Test score:"\cf3 )\cb1 \
+\cb12 print(\cf8 mlr\cf3 .\cf9 score\cf3 (\cf8 x_test\cf3 , \cf8 y_test\cf3 ))\cb1 \
+\
+\cf8 \cb12 residuals\cf3  = \cf8 y_predict\cf3  - \cf8 y_test\cf3 \cb1 \
+\
+\cf8 \cb12 plt\cf3 .\cf9 scatter\cf3 (\cf8 y_predict\cf3 , \cf8 residuals\cf3 , \cf8 alpha\cf3 =\cf8 0.4\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 title\cf3 (\cf13 'Residual Analysis'\cf3 )\cb1 \
+\
+\cf8 \cb12 plt\cf3 .\cf9 show\cf3 ()\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)"}}{\fldrslt 
+\f1\b \cf2 \ul Naive Bayes}}
+\f1\b \cf4 \
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+\cf5 Import and create the model:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf6 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 from\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 sklearn\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 naive_bayes\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf6 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 import\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 MultinomialNB\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 MultinomialNB\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ()\
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf5 \cb3 \shad0 Fit:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf8 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 fit\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 x_training_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 y_training_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf5 \cb3 \shad0 Predict:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf14 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 # Returns a list of predicted classes - one prediction for every data point\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predictions\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predict\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_x_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf14 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 # For every data point, returns a list of probabilities of each class\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 probabilities\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predict_proba\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_x_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \shad0 \
+Esasen 
+\f5\i\fs48 \cf15 \cb1 P
+\f4\i0 (
+\f5\i A
+\f4\i0 \'a0
+\f6 \uc0\u8739 
+\f4 \'a0
+\f5\i B
+\f4\i0 )=(
+\f5\i \cf5 P
+\f7\i0 (
+\f5\i B
+\f7\i0 \'a0
+\f6 \uc0\u8739 
+\f7 \'a0
+\f5\i A
+\f7\i0 )
+\f8 \uc0\u8901 
+\f5\i P
+\f7\i0 (
+\f5\i A
+\f7\i0 ))/
+\f5\i P
+\f7\i0 (
+\f5\i B
+\f7\i0 ) 
+\fs28 bu form\'fcl\'fcn sonucunu bulmaya calisiyoruz. Form\'fcl B bilindi\uc0\u287 inde A nin olma olasiligi demek. B nin yerine data point, A nin yerine de class koyarsak bir model oluyor. Ornegin bir e-mailin spam olup olmadigini bulmaya calisiyoruz. Spam olma olasiligi 
+\f3\fs21\fsmilli10800 \cf10 \cb11 P(spam | email) 
+\f2\fs35\fsmilli17600 \cf5 \cb3 ile \'a0spam olmama olasiligini 
+\f3\fs21\fsmilli10800 \cf10 \cb11 P(not spam | email) karsilastiririz. Hangi olas\uc0\u305 l\u305 k daha b\'fcy\'fckse onu seceriz.\
+Naive Bayes genelde text classification icin kullan\uc0\u305 l\u305 yor. Ornegin elimizde review=
+\f2\fs35\fsmilli17600 \cf5 \cb3  \'93This crib was amazing\'94 diye bir yorum olsun ve bu yorumun
+\f3\fs21\fsmilli10800 \cf10 \cb11  olumlu mu yoksa olumsuz mu Oldugunu \'f6\uc0\u287 renmek istiyoruz.
+\f2\fs35\fsmilli17600 \cf5 \cb3  \'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 P(positive | review)
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0ve\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 P(negative | review)
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0olasiliklarini karsilastirmamiz laz\uc0\u305 m. Elimizde yorumlar ve bu yorumlar\u305 n olumlu/olumsuz oldugunu g\'f6steren labellar var.\
+\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f3\fs21\fsmilli10800 \cf10 \cb11 Yorumun olumlu olma ihtimali P(positive | review)= 
+\f5\i\fs24 \cf15 \cb1 (
+\fs34\fsmilli17424 \cf5 P
+\f7\i0 (review\'a0|\'a0positive)
+\f9 *
+\f5\i P
+\f7\i0 (positive))/
+\f5\i P
+\f7\i0 (review)\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f5\i \cf5 P
+\f7\i0 (positive)= herhangi bir yorumun pozitif olma ihtimali( pozitif yorum say\uc0\u305 s\u305  /tum yorum say\u305 s\u305 )\
+
+\f5\i P
+\f7\i0 (review\'a0|\'a0positive)
+\f8 = 
+\f9 yorumumuz
+\f8  
+\f9 icindeki
+\f8  
+\f9 kelimelerin
+\f8  (
+\f2\fs35\fsmilli17600 \cb3 \'93This\'94, \'93crib\'94, \'93was\'94, and \'93amazing\'94) 
+\f9\fs34\fsmilli17424 \cb1 pozitif
+\f8  
+\f9 yorumlar
+\f8  
+\f9 icinde
+\f8  
+\f9 olma olasiligi demek.\
+	
+\f5\i \cb3 P
+\f7\i0 (\'93This\'a0crib\'a0was\'a0amazing"\'a0
+\f6 \uc0\u8739 
+\f7 \'a0positive)=
+\f5\i P
+\f7\i0 (\'93This"\'a0
+\f6 \uc0\u8739 
+\f7 \'a0positive)
+\f9 *
+\f5\i P
+\f7\i0 (\'93crib"\'a0
+\f6 \uc0\u8739 
+\f7 \'a0positive)
+\f9 *
+\f5\i P
+\f7\i0 (\'93was"\'a0
+\f6 \uc0\u8739 
+\f7 \'a0positive)
+\f9 *
+\f5\i P
+\f7\i0 (\'93amazing"\'a0
+\f6 \uc0\u8739 
+\f7 \'a0positive)\
+		
+\f5\i\fs24 \cf15 \cb1 P
+\f4\i0 (\'93crib"\'a0
+\f6 \uc0\u8739 
+\f4 \'a0positive)=(
+\f7\fs34\fsmilli17424 \cf5 #\'a0of\'a0\'93crib"\'a0in\'a0positive)/(#\'a0of\'a0words\'a0in\'a0positive)\
+
+\f5\i P
+\f7\i0 (review)= 
+\f9 yorumumuz
+\f8  
+\f9 icindeki
+\f8  
+\f9 kelimelerin
+\f8  (
+\f2\fs35\fsmilli17600 \cb3 \'93This\'94, \'93crib\'94, \'93was\'94, and \'93amazing\'94) 
+\f9\fs34\fsmilli17424 \cb1 tum
+\f8  
+\f9 yorumlar
+\f8  
+\f9 icinde
+\f8  
+\f9 olma olasiligi demek. Yukaridaki gibi hesaplan\uc0\u305 yor. 
+\f3\fs21\fsmilli10800 \cf10 \cb11 P(positive | review)
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0ve\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 P(negative | review)
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0olasiliklarini karsilastirdigimiz icin ve ikisinin de paydas\uc0\u305  ayni oldu\u287 u icin 
+\f5\i\fs34\fsmilli17424 \cb1 P
+\f7\i0 (review) 
+\f2\fs35\fsmilli17600 \cb3 hesaplamaya gerek yok.
+\f9\fs34\fsmilli17424 \cb1 \
+\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f3\fs21\fsmilli10800 \cf10 \cb11 Yorumun olumsuz olma ihtimali P(negative | review)= 
+\f5\i\fs24 \cf15 \cb1 (
+\fs34\fsmilli17424 \cf5 P
+\f7\i0 (review\'a0|\'a0negative)
+\f9 *
+\f5\i P
+\f7\i0 (negative))/
+\f5\i P
+\f7\i0 (review) yukaridaki gibi hesaplan\uc0\u305 yor.\
+Modeli fit ettiginde arka planda asagidaki gibi bir fonksiyon haz\uc0\u305 rl\u305 yor. Daha sonra test icin girece\u287 in yorum bu fonksiyonun bir parametresi oluyor.
+\f2\fs38\fsmilli19200 \cb3 \
+Bunu yapan kod:\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf6 \cb12 from\cf3  \cf8 reviews\cf3  \cf6 import\cf3  \cf8 neg_counter\cf3 , \cf8 pos_counter\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 review\cf3  = \cf13 "This is super bad"\cf3 \cb1 \
+\
+\cf8 \cb12 percent_pos\cf3  = \cf8 0.5\cf3 \cb1 \
+\cf8 \cb12 percent_neg\cf3  = \cf8 0.5\cf3 \cb1 \
+\
+\cf8 \cb12 total_pos\cf3  = sum(\cf8 pos_counter\cf3 .\cf9 values\cf3 ())\cb1 \
+\cf8 \cb12 total_neg\cf3  = sum(\cf8 neg_counter\cf3 .\cf9 values\cf3 ())\cb1 \
+\
+\cf8 \cb12 pos_probability\cf3  = \cf8 1\cf3 \cb1 \
+\cf8 \cb12 neg_probability\cf3  = \cf8 1\cf3 \cb1 \
+\
+\cf8 \cb12 review_words\cf3  = \cf8 review\cf3 .\cf9 split\cf3 ()\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 for\cf3  \cf8 word\cf3  \cf6 in\cf3  \cf8 review_words\cf3 :\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12   \cf8 word_in_pos\cf3  = \cf8 pos_counter\cf3 [\cf8 word\cf3 ]\cb1 \
+\cb12   \cf8 word_in_neg\cf3  = \cf8 neg_counter\cf3 [\cf8 word\cf3 ]\cb1 \
+\cb12   \cb1 \
+\cb12   \cf8 pos_probability\cf3  *= (\cf8 word_in_pos\cf3  + \cf8 1\cf3 ) / (\cf8 total_pos\cf3  + len(\cf8 pos_counter\cf3 ))				bir kelime datada hi\'e7 yoksa probability formulu sonucu s\uc0\u305 f\u305 r \'e7\u305 kar, bu olmas\u305 n diye Smooting yap\u305 l\u305 yor. paydaki +1 ile paydadaki len(\'85) ordan geliyor.\cb1 \
+\cb12   \cf8 neg_probability\cf3  *= (\cf8 word_in_neg\cf3  + \cf8 1\cf3 ) / (\cf8 total_neg\cf3  + len(\cf8 neg_counter\cf3 ))\cb1 \
+\
+\cf8 \cb12 final_pos\cf3 = \cf8 pos_probability\cf3 *\cf8 percent_pos\cf3 \cb1 \
+\cf8 \cb12 final_neg\cf3 = \cf8 neg_probability\cf3 *\cf8 percent_neg\cf3 \cb1 \
+\
+\cb12 print(\cf8 final_pos\cf3 )\cb1 \
+\cb12 print(\cf8 final_neg\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 if\cf3  \cf8 final_pos>final_neg\cf3 :\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12   print(\cf13 "The review is positive"\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 else\cf3 :\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12   print(\cf13 "The review is negative"\cf3 )\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier"}}{\fldrslt 
+\f1\b \cf2 \ul K-Nearest Neighbors}}
+\f1\b \cf4 \
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+\cf5 Import and create the model:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf6 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 from\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 sklearn\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 neigbors\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf6 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 import\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 KNeighborsClassifier\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 KNeighborsClassifier\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ()\
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf5 \cb3 \shad0 Fit:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf8 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 fit\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 x_training_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 y_training_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf5 \cb3 \shad0 Predict:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf14 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 # Returns a list of predicted classes - one prediction for every data point\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predictions\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predict\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_x_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf14 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 # For every data point, returns a list of probabilities of each class\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 probabilities\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predict_proba\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_x_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \shad0 \
+Arka planda yap\uc0\u305 lan \u351 ey:\
+Ornegin elimizde filmlerin isimleri, bu filmlerin ozellikleri (butce, \'e7ekildi\uc0\u287 i y\u305 l, suresi) ve kategorik olarak iyi film (1-0) olup olmad\u305 klar\u305  bilgileri var. Bu bilgileri kullanarak listemizde olmayan bir filmin iyi bir film olup olmadigini bulmak istiyoruz. \'d6ncelikle filmin \'f6zelliklerini normalize ediyor.(\'e7\'fcnk\'fc mesele b\'fct\'e7e 253 milyon yil 2015 bu sayalar ayni degerlendirilmemeli) Sonra \'d6klid hesab\u305 yla her filmin di\u287 er filme uzakligini buluyor, bu uzakl\u305 klar\u305  k\'fc\'e7\'fckten b\'fcy\'fc\u287 e s\u305 ral\u305 yor. Sonra belirledi\u287 imiz k degerine gore en yakin k komsuyu al\u305 yor. K komsu filmin iyi film olup olmadigina bak\u305 yor, e\u287 er say\u305 ca iyi filmler fazlaysa inceledi\u287 imiz film iyi say\u305 l\u305 yor ya da vice versa.\
+Modeli fit ettiginde yukar\uc0\u305 dakini test datas\u305 na uygulayacak fonksiyonu haz\u305 rl\u305 yor.\
+\
+Validation accuracy: elimizdeki data setini training ve validation set olarak 2 ye ayiriyor, validation setteki her filmi yukaridaki mant\uc0\u305 kla 1 ve 0 olarak belirliyor. Sonra bu degerleri filmlerin gercek degerleriyle karsilastirip bir dogruluk degeri buluyor. K degeri de\u287 i\u351 tik\'e7e do\u287 ruluk degeri de\u287 i\u351 iyor.\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs35\fsmilli17600 \cf5 When\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 k
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0is small, overfitting occurs and the accuracy is relatively low. On the other hand, when\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 k
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0gets too large, underfitting occurs and accuracy starts to drop.\
+
+\fs38\fsmilli19200 \
+Ornek-1\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf6 \cb12 rom\cf3  \cf8 movies\cf3  \cf6 import\cf3  \cf8 movie_dataset\cf3 , \cf8 labels\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 neighbors\cf3  \cf6 import\cf3  \cf8 KNeighborsClassifier\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 classifier\cf3  = \cf8 KNeighborsClassifier\cf3 (\cf8 n_neighbors\cf3  = \cf8 5\cf3 )\cb1 \
+\cf8 \cb12 classifier\cf3 .\cf9 fit\cf3 (\cf8 movie_dataset\cf3 , \cf8 labels\cf3 )\cb1 \
+\
+\cf8 \cb12 guess\cf3 =\cf8 classifier\cf3 .\cf9 predict\cf3 ([[\cf8 .45\cf3 , \cf8 .2\cf3 , \cf8 .5\cf3 ], [\cf8 .25\cf3 , \cf8 .8\cf3 , \cf8 .9\cf3 ],[\cf8 .1\cf3 , \cf8 .1\cf3 , \cf8 .9\cf3 ]])\cb1 \
+\cb12 print(\cf8 guess\cf3 )\
+\
+\
+Ornek-2 (grafik ile en uygun k  yi bulma)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf6 import\cf3  \cf8 codecademylib3_seaborn\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 datasets\cf3  \cf6 import\cf3  \cf8 load_breast_cancer\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 neighbors\cf3  \cf6 import\cf3  \cf8 KNeighborsClassifier\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 model_selection\cf3  \cf6 import\cf3  \cf8 train_test_split\cf3 \cb1 \
+\cf6 \cb12 import\cf3  \cf8 matplotlib\cf3 .\cf9 pyplot\cf3  \cf6 as\cf3  \cf8 plt\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 breast_cancer_data\cf3 =\cf8 load_breast_cancer\cf3 ()\cb1 \
+\
+\cf8 \cb12 training_data\cf3 , \cf8 validation_data\cf3 , \cf8 training_labels\cf3 , \cf8 validation_labels\cf3  = \cf8 train_test_split\cf3 (\cf8 breast_cancer_data\cf3 .\cf9 data\cf3 , \cf8 breast_cancer_data\cf3 .\cf9 target\cf3 , \cf8 train_size\cf3 =\cf8 0.8\cf3 , \cf8 test_size\cf3 =\cf8 0.2\cf3 , \cf8 random_state\cf3 =\cf8 100\cf3 )\cb1 \
+\
+\cf8 \cb12 accuracies\cf3 =[]\cb1 \
+\cf8 \cb12 k_list\cf3 =range(\cf8 1\cf3 ,\cf8 101\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 for\cf3  \cf8 k\cf3  \cf6 in\cf3  range(\cf8 1\cf3 ,\cf8 101\cf3 ):\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12   \cf8 classifier\cf3  = \cf8 KNeighborsClassifier\cf3 (\cf8 n_neighbors\cf3  = \cf8 k\cf3 )\cb1 \
+\cb12   \cf8 classifier\cf3 .\cf9 fit\cf3 (\cf8 training_data\cf3 ,\cf8 training_labels\cf3 )\cb1 \
+\
+\cb12   \cf8 accuracies\cf3 .\cf9 append\cf3 (\cf8 classifier\cf3 .\cf9 score\cf3 (\cf8 validation_data\cf3 ,\cf8 validation_labels\cf3 ))\cb1 \
+\
+\cf8 \cb12 plt\cf3 .\cf9 plot\cf3 (\cf8 k_list\cf3 ,\cf8 accuracies\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 xlabel\cf3 (\cf13 'k'\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 ylabel\cf3 (\cf13 'Validation Accuracy'\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 title\cf3 (\cf13 'Breast Cancer Classifier Accuracy'\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 show\cf3 ()\cb1 \
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier"}}{\fldrslt 
+\f1\b \cf2 \ul K-Nearest Neighbors}}
+\f1\b \cf2 \ul  Regression\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\b0 \cf5 \ulnone K-Nearset Neighbors ile ayni yolu izliyor, ancak burada filmi iyi veya kotu olarak siniflandirmaktan ziyade filme puan veriyor. Puanlamayi K komsu filmin puanlarinin ortalamas\uc0\u305 ni (simple ya da weighted) alarak yap\u305 yor.\
+Modeli fit ettiginde test datas\uc0\u305 na uygulanacak fonksiyonu haz\u305 rl\u305 yor.\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf6 \cb12 from\cf3  \cf8 movies\cf3  \cf6 import\cf3  \cf8 movie_dataset\cf3 , \cf8 movie_ratings\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 neighbors\cf3  \cf6 import\cf3  \cf8 KNeighborsRegressor\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 regressor\cf3  = \cf8 KNeighborsRegressor\cf3 (\cf8 n_neighbors\cf3  = \cf8 5\cf3 , \cf8 weights\cf3  = \cf13 "distance\'94\cf3 )		 weights=distance ise, distance gore agirlikli ortalamasini al\uc0\u305 yor, distance= uniform ise e\u351 it agirliklandirma yap\u305 yor\cb1 \
+\
+\cf8 \cb12 regressor\cf3 .\cf9 fit\cf3 (\cf8 movie_dataset\cf3 , \cf8 movie_ratings\cf3 )\cb1 \
+\
+\cf8 \cb12 guesses\cf3  = \cf8 regressor\cf3 .\cf9 predict\cf3 ([[\cf8 0.016\cf3 , \cf8 0.300\cf3 , \cf8 1.022\cf3 ], [\cf8 0.0004092981\cf3 , \cf8 0.283\cf3 , \cf8 1.0112\cf3 ],\cb1 \
+\cb12 [\cf8 0.00687649\cf3 , \cf8 0.235\cf3 , \cf8 1.0112\cf3 ]])\cb1 \
+\
+\cb12 print(\cf8 guesses\cf3 )\cb1 \
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \cb1 \kerning1\expnd0\expndtw0 \'97 {\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"}}{\fldrslt 
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\ul Logistic Regression}}
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\ul \
+\
+Ikili siniflandirma yapmak icin kullan\uc0\u305 l\u305 r. \'d6\u287 renci s\u305 nav\u305  gececek mi(1) gecemeyecek mi(0)?\
+Logistic regression loss fonksiyonu (bir ML modelinin tahmin basarisini \'f6l\'e7er) log loss tur. Model log loss minimum yapan katsay\uc0\u305 lar\u305  bulur, sonra  bu katsay\u305 lara gore her \'f6\u287 rencinin s\u305 nav\u305  ge\'e7me olasiligini hesaplar, olas\u305 l\u305 k esik degerden (default degeri 0.5) b\'fcy\'fckse 1, k\'fc\'e7\'fckse 0 degeri verir.\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f2\b0\fs35\fsmilli17600 \cf5 \ulnone The coefficients determined by a Logistic Regression model can be used to interpret the relative importance of each feature in predicting the class of a data sample.
+\f1\b\fs38\fsmilli19200 \cf2 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\b0\fs28\fsmilli14080 \cf6 \cb12 \ulnone from\cf3  \cf8 sklearn\cf3 .\cf9 linear_model\cf3  \cf6 import\cf3  \cf8 LogisticRegression\
+\
+model\cf3  = \cf8 LogisticRegression\cf3 ()\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 model\cf3 .\cf9 fit\cf3 (\cf8 hours_studied_scaled\cf3 , \cf8 passed_exam\cf3 )\
+\cb1 \
+\cf8 \cb12 calculated_coefficients\cf3 =\cf8 model\cf3 .\cf9 coef_\cf3 \cb1 \
+\cf8 \cb12 intercept\cf3 =\cf8 model\cf3 .\cf9 intercept_\cf3 \cb1 \
+\
+\cf8 \cb12 passed_predictions\cf3 =\cf8 model\cf3 .\cf9 predict_proba\cf3 (\cf8 guessed_hours_scaled\cf3 )\cb1 \
+\cf8 \cb12 passed_predictions_2\cf3 =\cf8 model_2\cf3 .\cf9 predict\cf3 (\cf8 exam_features_scaled_test\cf3 )\cf8 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 Ornek-1:\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\b0\fs28\fsmilli14080 \cf6 \cb12 \ulnone import\cf3  \cf8 numpy\cf3  \cf6 as\cf3  \cf8 np\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 linear_model\cf3  \cf6 import\cf3  \cf8 LogisticRegression\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 exam\cf3  \cf6 import\cf3  \cf8 hours_studied_scaled\cf3 , \cf8 passed_exam\cf3 , \cf8 exam_features_scaled_train\cf3 , \cf8 exam_features_scaled_test\cf3 , \cf8 passed_exam_2_train\cf3 , \cf8 passed_exam_2_test\cf3 , \cf8 guessed_hours_scaled\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Create and fit logistic regression model here\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 model\cf3  = \cf8 LogisticRegression\cf3 ()\cb1 \
+\cf8 \cb12 model\cf3 .\cf9 fit\cf3 (\cf8 hours_studied_scaled\cf3 , \cf8 passed_exam\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Save the model coefficients and intercept here\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 calculated_coefficients\cf3 =\cf8 model\cf3 .\cf9 coef_\cf3 \cb1 \
+\cf8 \cb12 intercept\cf3 =\cf8 model\cf3 .\cf9 intercept_\cf3 \cb1 \
+\cb12 print(\cf8 calculated_coefficients\cf3 ,\cf8 intercept\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Predict the probabilities of passing for next semester's students here\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 passed_predictions\cf3 =\cf8 model\cf3 .\cf9 predict_proba\cf3 (\cf8 guessed_hours_scaled\cf3 )\cb1 \
+\cb12 print(\cf8 passed_predictions\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Create a new model on the training data with two features here\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 model_2\cf3  = \cf8 LogisticRegression\cf3 ()\cb1 \
+\cf8 \cb12 model_2\cf3 .\cf9 fit\cf3 (\cf8 exam_features_scaled_train\cf3 , \cf8 passed_exam_2_train\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Predict whether the students will pass here\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 passed_predictions_2\cf3 =\cf8 model_2\cf3 .\cf9 predict\cf3 (\cf8 exam_features_scaled_test\cf3 )\cb1 \
+\cb12 print(\cf8 passed_predictions_2\cf3 )\cb1 \
+\cb12 print(\cf8 passed_exam_2_test\cf3 )\
+\
+Ornek-2\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf6 import\cf3  \cf8 codecademylib3_seaborn\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 import\cf3  \cf8 pandas\cf3  \cf6 as\cf3  \cf8 pd\cf3 \cb1 \
+\cf6 \cb12 import\cf3  \cf8 numpy\cf3  \cf6 as\cf3  \cf8 np\cf3 \cb1 \
+\cf6 \cb12 import\cf3  \cf8 matplotlib\cf3 .\cf9 pyplot\cf3  \cf6 as\cf3  \cf8 plt\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 linear_model\cf3  \cf6 import\cf3  \cf8 LogisticRegression\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 model_selection\cf3  \cf6 import\cf3  \cf8 train_test_split\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 preprocessing\cf3  \cf6 import\cf3  \cf8 StandardScaler\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Load the passenger data\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 passengers\cf3 =\cf8 pd\cf3 .\cf9 read_csv\cf3 (\cf13 'passengers.csv'\cf3 )\cb1 \
+\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Update sex column to numerical\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 passengers\cf3 [\cf13 'Sex'\cf3 ]=\cf8 passengers\cf3 [\cf13 'Sex'\cf3 ].\cf9 map\cf3 (\{\cf13 'male'\cf3 :\cf8 1\cf3 ,\cf13 'female'\cf3 :\cf8 2\cf3 \})\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Fill the nan values in the age column\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 passengers\cf3 [\cf13 'Age'\cf3 ]=\cf8 passengers\cf3 [\cf13 'Age'\cf3 ].\cf9 fillna\cf3 (\cf8 passengers\cf3 [\cf13 'Age'\cf3 ].\cf9 mean\cf3 ()) \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Create a first class column\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 passengers\cf3 [\cf13 'FirstClass'\cf3 ] = \cf8 passengers\cf3 [\cf13 'Pclass'\cf3 ].\cf9 apply\cf3 (\cf6 lambda\cf3  \cf8 x\cf3 : \cf8 1\cf3  \cf6 if\cf3  \cf8 x\cf3  == \cf8 1\cf3  \cf6 else\cf3  \cf8 0\cf3 )\cb1 \
+\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Create a second class column\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 passengers\cf3 [\cf13 'SecondClass'\cf3 ] = \cf8 passengers\cf3 [\cf13 'Pclass'\cf3 ].\cf9 apply\cf3 (\cf6 lambda\cf3  \cf8 x\cf3 : \cf8 1\cf3  \cf6 if\cf3  \cf8 x\cf3  == \cf8 2\cf3  \cf6 else\cf3  \cf8 0\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Select the desired features\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 features\cf3 =\cf8 passengers\cf3 [[\cf13 'Sex'\cf3 ,\cf13 'Age'\cf3 ,\cf13 'FirstClass'\cf3 ,\cf13 'SecondClass'\cf3 ]]\cb1 \
+\cf8 \cb12 survival\cf3 =\cf8 passengers\cf3 [\cf13 'Survived'\cf3 ]\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Perform train, test, split\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 x_train\cf3 , \cf8 x_test\cf3 , \cf8 y_train\cf3 , \cf8 y_test\cf3  = \cf8 train_test_split\cf3 (\cf8 features\cf3 , \cf8 survival\cf3 , \cf8 train_size\cf3 =\cf8 0.8\cf3 , \cf8 test_size\cf3 =\cf8 0.2\cf3 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Scale the feature data so it has mean = 0 and standard deviation = 1\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 scaler\cf3  = \cf8 StandardScaler\cf3 ()\cb1 \
+\cf8 \cb12 x_train\cf3  = \cf8 scaler\cf3 .\cf9 fit_transform\cf3 (\cf8 x_train\cf3 )\cb1 \
+\cf8 \cb12 x_test\cf3  = \cf8 scaler\cf3 .\cf9 transform\cf3 (\cf8 x_test\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Create and train the model\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 model\cf3  = \cf8 LogisticRegression\cf3 ()\cb1 \
+\cf8 \cb12 model\cf3 .\cf9 fit\cf3 (\cf8 x_train\cf3 , \cf8 y_train\cf3 )\cb1 \
+\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Score the model on the train data\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12 print(\cf8 model\cf3 .\cf9 score\cf3 (\cf8 x_train\cf3 ,\cf8 y_train\cf3 ))\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Score the model on the test data\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12 print(\cf8 model\cf3 .\cf9 score\cf3 (\cf8 x_test\cf3 ,\cf8 y_test\cf3 ))\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Analyze the coefficients\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12 print(\cf8 model\cf3 .\cf9 coef_\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 #[[ 1.21532723 -0.39276653  0.93851664  0.46418247]] most important feature is 'Sex'\cf3 \cb1 \
+\
+\cf14 \cb12 # Sample passenger features\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 Jack\cf3  = \cf8 np\cf3 .\cf9 array\cf3 ([\cf8 0.0\cf3 ,\cf8 20.0\cf3 ,\cf8 0.0\cf3 ,\cf8 0.0\cf3 ])\cb1 \
+\cf8 \cb12 Rose\cf3  = \cf8 np\cf3 .\cf9 array\cf3 ([\cf8 1.0\cf3 ,\cf8 17.0\cf3 ,\cf8 1.0\cf3 ,\cf8 0.0\cf3 ])\cb1 \
+\cf8 \cb12 Emma\cf3  = \cf8 np\cf3 .\cf9 array\cf3 ([\cf8 1.0\cf3 ,\cf8 23.0\cf3 ,\cf8 0.0\cf3 ,\cf8 1.0\cf3 ])\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Combine passenger arrays\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 combined_arrays\cf3  = \cf8 np\cf3 .\cf9 array\cf3 ([ \cf8 Jack\cf3 , \cf8 Rose\cf3 , \cf8 Emma\cf3  ])\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Scale the sample passenger features\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 combined_arrays\cf3 = \cf8 scaler\cf3 .\cf9 transform\cf3 (\cf8 combined_arrays\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 #print(combined_arrays)\cf3 \cb1 \
+\
+\cf14 \cb12 # Make survival predictions!\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12 print(\cf8 model\cf3 .\cf9 predict\cf3 (\cf8 combined_arrays\cf3 ))\cb1 \
+\cb12 print(\cf8 model\cf3 .\cf9 predict_proba\cf3 (\cf8 combined_arrays\cf3 ))\
+\
+\cb1 \
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 \ul Support Vector Machines(SVM):\
+Amac noktalar aras\uc0\u305 ndan bir decision boundary \'e7izerek siniflandirma yapmak. Veriyi ikiye ay\u305 rmak icin verilerin arasindan sonsuz boundary \'e7izebiliriz. SVM en uygun boundary su sekilde buluyor; her sinifin olas\u305  boundary \'e7izgisine en yakin noktalar\u305 ndan gececek sekilde support vekt\'f6rleri \'e7iziyor. Support vekt\'f6r ile boundary \'e7izgisinin aras\u305 ndaki mesafeyi (margin) maksimize eden \'e7izgiyi boundary \'e7izgisi olarak belirliyor.
+\f4\b0\fs28\fsmilli14080 \cf3 \cb1 \ulnone \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl560\sa120\partightenfactor0
+\ls3\ilvl0
+\f2\fs35\fsmilli17600 \cf5 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+The\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 C
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0parameter controls how much error is allowed. A large\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 C
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0allows for little error and creates a hard margin(kisa mesafe). A small\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 C
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0allows for more error and creates a soft margin( uzun mesafe)\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+SVMs use kernels to classify points that aren\'92t linearly separable.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+Kernels transform points into higher dimensional space. A polynomial kernel transforms points into three dimensions while an rbf kernel transforms points into infinite dimensions.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl560\sa240\partightenfactor0
+\ls3\ilvl0\cf5 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+An rbf kernel has a\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 gamma
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0parameter. If\'a0
+\f3\fs21\fsmilli10800 \cf10 \cb11 gamma
+\f2\fs35\fsmilli17600 \cf5 \cb3 \'a0is large, the training data is more relevant, and as a result overfitting can occur.\
+\pard\tx566\pardeftab720\sl560\sa240\partightenfactor0
+\cf5 kernel=\'91linear\'92, \'91poly\'92 ve \'91rlf\'92 olabiliyor (default deger rbf). Poly: veriyi linear bir \'e7izgi veya linear bir duzlem ile ayiramadigin zaman deneyebilirsin. Bu ucunu deneyerek en y\'fcksek score bul.\
+Score y\'fckseltmek icin gamma ve c parametrelerini de\uc0\u287 i\u351 tir.\
+\pard\tx566\pardeftab720\sl560\sa240\partightenfactor0
+\cf5 \cb1 Ornek-1:\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf3 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 model_selection\cf3  \cf6 import\cf3  \cf8 train_test_split\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 svm\cf3  \cf6 import\cf3  \cf8 SVC\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 training_data\cf3 , \cf8 validation_data\cf3 , \cf8 training_labels\cf3 , \cf8 validation_labels\cf3  = \cf8 train_test_split\cf3 (\cf8 points\cf3 , \cf8 labels\cf3 , \cf8 train_size\cf3  = \cf8 0.8\cf3 , \cf8 test_size\cf3  = \cf8 0.2\cf3 , \cf8 random_state\cf3  = \cf8 100\cf3 )\cb1 \
+\
+\cf8 \cb12 classifier\cf3  = \cf8 SVC\cf3 (\cf8 kernel\cf3  = \cf13 "rbf"\cf3 , \cf8 gamma\cf3  = \cf8 0.1\cf3 )\cb1 \
+\cf8 \cb12 classifier\cf3 .\cf9 fit\cf3 (\cf8 training_data\cf3 ,\cf8 training_labels\cf3 )\cb1 \
+\
+\cb12 print(\cf8 classifier\cf3 .\cf9 score\cf3 (\cf8 validation_data\cf3 ,\cf8 validation_labels\cf3 ))\
+\
+\
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 \ul Decision Trees
+\f2\b0\fs35\fsmilli17600 \cf5 \cb1 \ulnone  \
+Siniflandirma yapmak icin kullan\uc0\u305 l\u305 yor. Amac information gain maksimum yapan a\u287 ac\u305  olu\u351 turmak. veriyi dallandiracagiz ama hangi \'f6zelliklere gore dallandiracagiz? Ilk fiyat\u305  mi kullanaca\u287 \u305 z yoksa kap\u305  sayisini mi? Su sekilde yap\u305 yor:\
+Ornegin elimizde ara\'e7larin \'f6zelliklerini (fiyat(\'e7ok pahal\uc0\u305 =1, pahali=2, gibi), kap\u305  say\u305 s\u305 , benzin t\'fcketimi vs) iceren bir liste (car_data) ile bu ara\'e7lar\u305  alanlar\u305 n ara\'e7tan ne d\'fczeyde memnun olduklar\u305 n\u305  g\'f6steren label lar (cok iyi, iyi, orta vs - car_label) olsun. Model once split edilmemi\u351  ilk verinin gini sayisini buluyor. (Elimizde 3 \'e7ok iyi, 4 iyi, 2 orta, 5 kotu, 3 \'e7ok kotu varsa; gini=1-(3/17)**2-(4/17)**2 \'85). Sonra birinci \'f6zelli\u287 e (fiyat) gore split ediyor. split edilmi\u351  dallar\u305 n da ayni hesapla gini sayisini buluyor. Sonra split edilmemi\u351  datan\u305 n gini say\u305 s\u305 ndan dallar\u305 n gini sayilarini \'e7\u305 kararak bir information gain say\u305 s\u305  elde ediyor. Bu say\u305  eger veriyi fiyata gore dallandirirsak olusacak information gain. Bu sekilde kac \'f6zellik varsa ayr\u305  ayr\u305  information gain buluyor. Amac bu information gain sayisini maksimize edecek \'f6zelli\u287 e( fiyat, kap\u305  say\u305 s\u305  vs.)  gore dallandirmayi yapmak (\'c7\'fcnk\'fc ilk asamada veriyi hangi \'f6zelli\u287 e gore dallandiracagimiza karar veremiyoruz) sonra ayni islemi herbir alt dal icin yap\u305 yor. Dalland\u305 ma islemi bir dal\u305 n gini say\u305 s\u305  0 oluncaya kadar (yani bir dalda sadece bir k\'fcmeye ait veri kal\u305 ncaya kadar) devam ediyor.\
+\'97 Decision tree ne kadar b\'fcy\'fcrse (dallan\uc0\u305 rsa) o kadar train datas\u305 na ait bir a\u287 a\'e7 olu\u351 turdu\u287 un anlam\u305 na gelir yani genellikten uzaklasirsin- overfit olursun. accuracy score y\'fckseltmek icin budama yapmak gerekebilir. Ne kadar dallanacagini max_depth ile belirleyebiliyorsun. 
+\f4\fs28\fsmilli14080 \cf8 \cb12 classifier\cf3  = \cf8 DecisionTreeClassifier\cf3 (\cf8 random_state\cf3  = \cf8 0\cf3 , \cf8 max_depth\cf3 =\cf8 11\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 tree\cf3  \cf6 import\cf3  \cf8 DecisionTreeClassifier\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 classifier\cf3  = \cf8 DecisionTreeClassifier\cf3 (\cf8 random_state\cf3  = \cf8 0\cf3 , \cf8 max_depth\cf3 =\cf8 11\cf3 )	\cb1 \
+\cf8 \cb12 classifier\cf3 .\cf9 fit\cf3 (\cf8 training_points\cf3 , \cf8 training_labels\cf3 )\
+classifier.predict(testing_points)\cb1 \
+\cb12 print(\cf8 classifier\cf3 .\cf9 score\cf3 (\cf8 testing_points\cf3 , \cf8 testing_labels\cf3 ))\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb15 Ornek-1\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 import\cf3  \cf8 codecademylib3_seaborn\cf3 \cb1 \
+\cf6 \cb12 import\cf3  \cf8 pandas\cf3  \cf6 as\cf3  \cf8 pd\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 model_selection\cf3  \cf6 import\cf3  \cf8 train_test_split\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 tree\cf3  \cf6 import\cf3  \cf8 DecisionTreeClassifier\cf3 \cb1 \
+\cf6 \cb12 import\cf3  \cf8 matplotlib\cf3 .\cf9 pyplot\cf3  \cf6 as\cf3  \cf8 plt\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 flags\cf3 =\cf8 pd\cf3 .\cf9 read_csv\cf3 (\cf13 'flags.csv'\cf3 , \cf8 header\cf3 =\cf8 0\cf3 )\cb1 \
+\cf8 \cb12 labels\cf3 =\cf8 flags\cf3 [[\cf13 'Landmass'\cf3 ]]\cb1 \
+\cf8 \cb12 data\cf3 = \cf8 flags\cf3 [[\cf13 "Red"\cf3 , \cf13 "Green"\cf3 , \cf13 "Blue"\cf3 , \cf13 "Gold"\cf3 ,\cb1 \
+\cb12  \cf13 "White"\cf3 , \cf13 "Black"\cf3 , \cf13 "Orange"\cf3 ,\cb1 \
+\cb12  \cf13 "Circles"\cf3 ,\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf13 \cb12 "Crosses"\cf3 ,\cf13 "Saltires"\cf3 ,\cf13 "Quarters"\cf3 ,\cf13 "Sunstars"\cf3 ,\cb1 \
+\cf13 \cb12 "Crescent"\cf3 ,\cf13 "Triangle"\cf3 ]]\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 train_data\cf3 , \cf8 test_data\cf3 , \cf8 train_labels\cf3 , \cf8 test_labels\cf3  = \cf8 train_test_split\cf3 (\cf8 data\cf3 ,\cf8 labels\cf3 ,\cf8 random_state\cf3 =\cf8 1\cf3 )\cb1 \
+\cf8 \cb12 scores\cf3 =[]\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 for\cf3  \cf8 i\cf3  \cf6 in\cf3  range(\cf8 1\cf3 ,\cf8 21\cf3 ):\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12   \cf8 tree\cf3 = \cf8 DecisionTreeClassifier\cf3 (\cf8 random_state\cf3 =\cf8 1\cf3 , \cf8 max_depth\cf3 =\cf8 i\cf3 )\cb1 \
+\cb12   \cf8 tree\cf3 .\cf9 fit\cf3 (\cf8 train_data\cf3 , \cf8 train_labels\cf3 )\cb1 \
+\cb12   \cf8 scores\cf3 .\cf9 append\cf3 (\cf8 tree\cf3 .\cf9 score\cf3 (\cf8 test_data\cf3 , \cf8 test_labels\cf3 ))\cb1 \
+\
+\cf8 \cb12 plt\cf3 .\cf9 plot\cf3 (range(\cf8 1\cf3 ,\cf8 21\cf3 ),\cf8 scores\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 show\cf3 ()\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb15 \
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 Random Forest\
+\
+Decision trees yapisi gere\uc0\u287 i overfite egilimli (cunku bir k\'fcmenin icinde baska bir class kalmay\u305 ncaya kadar dallanmaya devam ediyor). Bu drawback i budama yaparak bir nebze engelleyebiliyoruz ama yeterli degil, bu y\'fczden random forest kullan\u305 yoruz. Random forest icindeki her karar a\u287 ac\u305  bir nokta ile ilgili bir karar veriyor ve en fazla secilen karar random forestin nihai karar\u305  oluyor. Random forest icindeki karar agaclari nas\u305 l olu\u351 turuluyor? 1000 satirlik bir veriden random satir se\'e7erek (secilen satir tekrar secilebilir kosuluyla) yeni bir 1000 satirlik veri olu\u351 turuluyor. Her satir birden fazla secilebildigi icin ve secim random oldu\u287 u icin her seferinde farkl\u305  bir subtree olu\u351 turuyor. Buna bagging deniyor. bir de feature bagging ile karar agaclarini \'e7e\u351 itlendirme yolu var, o da s\'f6yle oluyor: decision trees y\'f6nteminde her asamada agaclandirmak icin en uygun \'f6zelli\u287 i bulurken tum datadaki tum \'f6zellikleri hesaba kat\u305 yorduk, bunda ise ornegin 20 \'f6zellik varsa random 5 ine gore sec diyoruz. Bu da random forest icinde farkl\u305  farkli subtree olmas\u305 n\u305  sa\u287 l\u305 yor.\
+\
+Ornek-1:\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 import\cf3  \cf8 pandas\cf3  \cf6 as\cf3  \cf8 pd\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 model_selection\cf3  \cf6 import\cf3  \cf8 train_test_split\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3  \cf6 import\cf3  \cf8 tree\cf3 \cb1 \
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 ensemble\cf3  \cf6 import\cf3  \cf8 RandomForestClassifier\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 income_data\cf3 =\cf8 pd\cf3 .\cf9 read_csv\cf3 (\cf13 'income.csv'\cf3 , \cf8 delimiter\cf3 =\cf13 ', '\cf3 , \cf8 header\cf3 =\cf8 0\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 #print(income_data.iloc[0])\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 income_data\cf3 [\cf13 "sex-int"\cf3 ] = \cf8 income_data\cf3 [\cf13 "sex"\cf3 ].\cf9 apply\cf3 (\cf6 lambda\cf3  \cf8 row\cf3 : \cf8 0\cf3  \cf6 if\cf3  \cf8 row\cf3  == \cf13 "Male"\cf3  \cf6 else\cf3  \cf8 1\cf3 )\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 #print(income_data["native-country"].value_counts())\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 income_data\cf3 [\cf13 "country-int"\cf3 ] = \cf8 income_data\cf3 [\cf13 "native-country"\cf3 ].\cf9 apply\cf3 (\cf6 lambda\cf3  \cf8 row\cf3 : \cf8 0\cf3  \cf6 if\cf3  \cf8 row\cf3  == \cf13 "United-States"\cf3  \cf6 else\cf3  \cf8 1\cf3 )\cb1 \
+\
+\cf8 \cb12 labels\cf3 =\cf8 income_data\cf3 [[\cf13 'income'\cf3 ]]\cb1 \
+\cf8 \cb12 data\cf3 =\cf8 income_data\cf3 [[\cf13 "age"\cf3 , \cf13 "capital-gain"\cf3 , \cf13 "capital-loss"\cf3 , \cf13 "hours-per-week"\cf3 ,\cf13 'sex-int'\cf3 ,\cf13 'country-int'\cf3 ]]\cb1 \
+\
+\cf8 \cb12 train_data\cf3 , \cf8 test_data\cf3 , \cf8 train_labels\cf3 , \cf8 test_labels\cf3 =\cf8 train_test_split\cf3 (\cf8 data\cf3 ,\cf8 labels\cf3 ,\cf8 random_state\cf3 =\cf8 1\cf3 )\cb1 \
+\
+\cf8 \cb12 forest\cf3 =\cf8 RandomForestClassifier\cf3 (\cf8 random_state\cf3 =\cf8 1\cf3 )\cb1 \
+\cf8 \cb12 forest\cf3 .\cf9 fit\cf3 (\cf8 train_data\cf3 ,\cf8 train_labels\cf3 )\
+print(forest.predict(test_data))\cb1 \
+\cb12 print(\cf8 forest\cf3 .\cf9 feature_importances_\cf3 )			datadaki s\'fctunlar\uc0\u305 n  onem derecelerini veriyor\cb1 \
+\cb12 print(\cf8 forest\cf3 .\cf9 score\cf3 (\cf8 test_data\cf3 ,\cf8 test_labels\cf3 ))\cb1 \
+(
+\f2\fs38\fsmilli19200 \cf5 \cb3 \
+\
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"}}{\fldrslt 
+\f1\b \cf2 \ul K-Means}}
+\f1\b \cf4 \
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+\cf5 Import and create the model:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf6 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 from\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 sklearn\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 cluster\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf6 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 import\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 KMeans\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 KMeans\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 n_clusters\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 =\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 4\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 init\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 =\cf13 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 'random'\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa120\partightenfactor0
+\ls4\ilvl0
+\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 \shad0 		\expnd0\expndtw0\kerning0
+n_clusters
+\f2\fs38\fsmilli19200 \cf5 \cb3 : number of clusters to form and number of centroids to generate\cb1 \
+\ls4\ilvl0
+\f3\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+init
+\f2\fs38\fsmilli19200 \cf5 \cb3 : method for initialization\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl360\sa120\partightenfactor0
+\ls4\ilvl1
+\f3\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+k-means++
+\f2\fs38\fsmilli19200 \cf5 \cb3 : K-Means++ [default]\cb1 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl360\partightenfactor0
+\ls4\ilvl1
+\f3\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+random
+\f2\fs38\fsmilli19200 \cf5 \cb3 : K-Means\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
+\ls4\ilvl0
+\f3\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+random_state
+\f2\fs38\fsmilli19200 \cf5 \cb3 : the seed used by the random number generator [optional]\cb1 \
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b \cf5 \cb3 Fit:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf8 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 fit\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 x_training_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf5 \cb3 \shad0 Predict:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf8 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predictions\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_model\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 predict\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 your_x_data\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \shad0 \
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+\cf5 print(classifier.cluster_centers_)\
+\
+Unsupervised y\'f6ntemlerinden birisi. Elimizde labellar yok. datadaki noktalari bir k\'fcme merkezine yakinliklarina gore kumelememizi sagliyor. Su sekilde calisiyor: once dataya kac k\'fcmeye ayiracagimiza karar veriyoruz (mesela 3). Sonra random olarak 3 tane merkez noktas\uc0\u305  seciyoruz. Sonra her noktan\u305 n bu 3 merkeze uzakligini buluyoruz. her noktay\u305  en yakin merkeze gore labelliyoruz (0,1,2 seklinde). Sonra merkezi 0 olan noktalar\u305 n mean alarak baska bir nokta daha buluyoruz. Son buldu\u287 umuz mean noktas\u305  ile ilk buldu\u287 umuz 0 merkezi \'f6rtusene kadar 0 merkezini random belirleme i\u351 lemine devam ediyoruz. Ayni islemi 1 merkezi ve 2 merkezi icin de yapiyoruz. Burada iki amac var, birincisi iki noktan\u305 n \'f6rt\'fc\u351 mesi ikincisi ise \'f6rt\'fc\u351 en merkez noktas\u305  ile o k\'fcmeye ait noktalar aras\u305 ndaki mesafenin en k\u305 sa olmas\u305 . Burdaki drawback su, random olarak bulunan ilk merkez noktas\u305  ile mean noktas\u305  ortusebilir ama mesafe ac\u305 s\u305 ndan en yakin nokta olmayabilir. Bir dikd\'f6rtgen dusun, dikd\'f6rtgenin hem boyunun hem de eninin orta noktas\u305  mean ile \'f6rt\'fc\u351 \'fcyor ancak uzaklik acisindan eninin orta noktas\u305 n\u305  secmek daha basarili. merkez noktalar\u305 n\u305  Random olarak secmek K-means modeli oluyor, bunun icin parametre olarak init=\'91random\'92 demen laz\u305 m, merkez noktas\u305  \'f6rt\'fc\u351 se bile uzakl\u305 k ac\u305 s\u305 ndan daha yakin noktalari bulmaya calismasi K-means++ modeli oluyor, bunun icinde init=\'91k=means++\'92 ya da hicbisey dememen laz\u305 m, \'e7\'fcnk\'fc default k-means++. \
+En optimum merkez sayisini inertia\'92ya (her datan\uc0\u305 n kendi merkezine uzakligi) bakarak bulabilirsin. Kodu:
+\f4\fs28\fsmilli14080 \cf3 \cb12   print(\cf8 model\cf3 .\cf9 inertia_\cf3 ). 
+\f2\fs38\fsmilli19200 \cf5 \cb3 Daha az inertia daha uygun bir model demek. Data say\uc0\u305 s\u305  kadar merkez olmas\u305  inertia\'92yi sifir yapar ama bu sefer de k\'fcmeleme yapamazs\u305 n, modelin yapmaya calistigi, en az merkez say\u305 s\u305  ile en az inertia\'92yi bulmak.  \
+Merkez say\uc0\u305 s\u305  artisinin inertia\'92ya marjinal etkisinin azaldigi nokta (grafigin yataylasmaya basladigi nokta) en uygun merkez sayisini verir. Grafi\u287 i \'e7izmekteyiz icin asagidaki kodu kullanabilirsin.
+\f4\fs28\fsmilli14080 \cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \
+\cf8 \cb12 iris\cf3  = \cf8 datasets\cf3 .\cf9 load_iris\cf3 ()\cb1 \
+\
+\cf8 \cb12 samples\cf3  = \cf8 iris\cf3 .\cf9 data\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf14 \cb12 # Code Start here:\cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 num_clusters\cf3 =[\cf8 1\cf3 ,\cf8 2\cf3 ,\cf8 3\cf3 ,\cf8 4\cf3 ,\cf8 5\cf3 ,\cf8 6\cf3 ,\cf8 7\cf3 ,\cf8 8\cf3 ]\cb1 \
+\cf8 \cb12 inertias\cf3 =[]\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 for\cf3  \cf8 k\cf3  \cf6 in\cf3  \cf8 num_clusters\cf3 :\cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf3 \cb12   \cf8 model\cf3  = \cf8 KMeans\cf3 (\cf8 n_clusters\cf3 =\cf8 k\cf3 )\cb1 \
+\cb12   \cf8 model\cf3 .\cf9 fit\cf3 (\cf8 samples\cf3 )\cb1 \
+\cb12   \cf8 inertias\cf3 .\cf9 append\cf3 (\cf8 model\cf3 .\cf9 inertia_\cf3 )\cb1 \
+\cb12   print(\cf8 model\cf3 .\cf9 inertia_\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 plot\cf3 (\cf8 num_clusters\cf3 , \cf8 inertias\cf3 , \cf13 '-o'\cf3 )\cb1 \
+\
+\cf8 \cb12 plt\cf3 .\cf9 xlabel\cf3 (\cf13 'Number of Clusters (k)'\cf3 )\cb1 \
+\cf8 \cb12 plt\cf3 .\cf9 ylabel\cf3 (\cf13 'Inertia'\cf3 )\cb1 \
+\
+\cf8 \cb12 plt\cf3 .\cf9 show\cf3 ()\cb1 \
+\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \
+Ornek-1:\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf3 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 cluster\cf3  \cf6 import\cf3  \cf8 KMeans\cf3 \cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf8 \cb12 iris\cf3  = \cf8 datasets\cf3 .\cf9 load_iris\cf3 ()\cb1 \
+\
+\cf8 \cb12 samples\cf3  = \cf8 iris\cf3 .\cf9 data\cf3 \cb1 \
+\
+\cf8 \cb12 model\cf3  = \cf8 KMeans\cf3 (\cf8 n_clusters\cf3 =\cf8 3\cf3 )\cb1 \
+\
+\cf8 \cb12 model\cf3 .\cf9 fit\cf3 (\cf8 samples\cf3 )\cb1 \
+\
+\cf8 \cb12 labels\cf3  = \cf8 model\cf3 .\cf9 predict\cf3 (\cf8 samples\cf3 )\cb1 \
+\
+\cb12 print(\cf8 labels\cf3 )\cb1 \
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics"}}{\fldrslt 
+\f1\b \cf2 \ul Validating the Model}}
+\f1\b \cf4 \
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+\cf5 Import and print accuracy, recall, precision, and F1 score:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf6 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 from\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 sklearn\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 metrics\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf6 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 import\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 accuracy_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 recall_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 precision_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 f1_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\
+print(\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 accuracy_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 true_labels\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 guesses\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ))\
+print(\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 recall_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 true_labels\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 guesses\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ))\
+print(\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 precision_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 true_labels\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 guesses\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ))\
+print(\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 f1_score\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 true_labels\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 guesses\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ))\
+\pard\pardeftab720\sl640\sa240\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf5 \cb3 \shad0 Import and print the confusion matrix:
+\f2\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs21\fsmilli10560 \cf6 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 from\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 sklearn\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 metrics\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf6 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 import\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 confusion_matrix\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\
+print(\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 confusion_matrix\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 true_labels\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 guesses\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 ))\
+\pard\pardeftab720\sl460\sa192\partightenfactor0
+
+\f2\fs38\fsmilli19200 \cf5 \cb3 \shad0 \
+\pard\pardeftab720\sl420\sa360\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"}}{\fldrslt 
+\f1\b \cf2 \ul Training Sets and Test Sets}}
+\f1\b \cf2 \ul  \cf4 \ulnone \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\b0\fs21\fsmilli10560 \cf6 \cb7 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 from\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 sklearn\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 .\cf9 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 model_selection\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf6 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 import\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 train_test_split\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 \
+\
+\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 x_train\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 x_test\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 y_train\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 y_test\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0  = \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 train_test_split\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 (\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 x\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 y\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 train_size\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 =\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 0.8\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 , \cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 test_size\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 =\cf8 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 0.2\cf3 \shad\shadx20\shady-20\shadr20\shado51 \shadc0 )\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa120\partightenfactor0
+\ls5\ilvl0
+\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 \shad0 		\expnd0\expndtw0\kerning0
+train_size
+\f2\fs38\fsmilli19200 \cf5 \cb3 : the proportion of the dataset to include in the train split\cb1 \
+\ls5\ilvl0
+\f3\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+test_size
+\f2\fs38\fsmilli19200 \cf5 \cb3 : the proportion of the dataset to include in the test split\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\sa240\partightenfactor0
+\ls5\ilvl0
+\f3\fs21\fsmilli10800 \cf10 \cb11 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+random_state
+\f2\fs38\fsmilli19200 \cf5 \cb3 : the seed used by the random number generator [optional]\
+\pard\tx566\pardeftab720\sl360\sa240\partightenfactor0
+\cf5 \cb1 \
+Perceptrons ve neural aglar\
+Binary classification problemleri \'e7\'f6zmek icin kullan\uc0\u305 l\u305 yor. N\'f6ronlar\u305 n karar verme s\'fcre\'e7lerini taklit ediyor. Elimizde inputlar, bu inputlarin agirliklari ve labellar var. \
+weighted_sum=w1*x1+w2*x2\
+Once weighted_sum hesaplaniyor. weighted_sum s\uc0\u305 f\u305 rdan b\'fcy\'fckse +1, k\'fc\'e7\'fckse -1 degeri veriyor, sonra gercek label degerine bakarak error (training error) hesapl\u305 yor. 
+\f5\i\fs34\fsmilli17333 training
+\fs24 \dn6 e
+\fs34\fsmilli17333 \up0 rror 
+\f4\i0 = 
+\f5\i actual
+\fs24 \dn6 l
+\fs34\fsmilli17333 \up0 abel 
+\f4\i0 \uc0\u8722  
+\f5\i predicted
+\f4\i0\fs24 \cf15 \
+
+\f2\fs38\fsmilli19200 \cf5 Inputtaki her deger icin bunu yap\uc0\u305 yor ve total error buluyor, sonra training error s\u305 f\u305 r oluncaya kadar yani tum degerleri do\u287 ru siniflandirana kadar bu agirliklari de\u287 i\u351 tiriyor (
+\f5\i\fs34\fsmilli17333 \cb3 weight 
+\f4\i0 = 
+\f5\i weight 
+\f4\i0 + (
+\f5\i error 
+\f8\i0 \uc0\u8727 
+\f4  
+\f5\i input
+\f4\i0 )  formulune gore ). \
+Buldugu agirliklar x lerin katsay\uc0\u305 lar\u305  oldu\u287 u icin bunlar\u305  kullanarak egim hesaplay\u305 p bir decision boundary \'e7izgisi \'e7izerek classification (linear classifier) yap\u305 yor.\
+** 
+\f2\fs35\fsmilli17600 \cf5 Perceptrons can\'92t solve problems that aren\'92t linearly separable. However, if you combine multiple perceptrons together, you now have a neural net that can solve these problems!
+\fs38\fsmilli19200 \cf5 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f4\fs28\fsmilli14080 \cf6 \cb12 from\cf3  \cf8 sklearn\cf3 .\cf9 linear_model\cf3  \cf6 import\cf3  \cf8 Perceptron
+\fs24 \cf15 \cb1 \
+
+\fs28\fsmilli14080 \cf8 \cb12 classifier\cf3 =\cf8 Perceptron\cf3 (\cf8 max_iter\cf3 =\cf8 40\cf3 )\cb1 \
+\cf8 \cb12 classifier\cf3 .\cf9 fit\cf3 (\cf8 data\cf3 ,\cf8 labels\cf3 )
+\f2\fs38\fsmilli19200 \cf5 \cb1 \
+\pard\tx566\pardeftab720\sl360\sa240\partightenfactor0
+\cf5 \
+Label encoder: sadece 2 gruba d\'f6n\'fc\uc0\u351 t\'fcreceksek kullan\u305 l\u305 r. Erkek 1 kad\u305 n 0 gibi.\
+One-hot encoder: 2 den fazla gruba ay\uc0\u305 racaksak kullan\u305 l\u305 r.\
+Nan degerleri grafiklestirme: msno.matrix\
+}

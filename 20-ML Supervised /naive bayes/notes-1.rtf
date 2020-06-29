@@ -1,0 +1,182 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red164\green191\blue255;\red23\green23\blue23;\red255\green255\blue255;
+\red252\green115\blue96;\red129\green131\blue134;\red254\green219\blue112;\red117\green255\blue242;}
+{\*\expandedcolortbl;;\cssrgb\c70196\c80000\c100000;\cssrgb\c11765\c11765\c11765;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c100000\c53725\c45098;\cssrgb\c57647\c58431\c59608;\cssrgb\c100000\c87843\c51373;\cssrgb\c51373\c100000\c96078;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh14800\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \'97
+\f1\fs28\fsmilli14080 \cf2 \cb3 \expnd0\expndtw0\kerning0
+from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 neg_list\cf4 , \cf5 pos_list\cf4 , \cf5 neg_counter\cf4 , \cf5 pos_counter\cf4 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf4 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb3 #print(pos_list[0])\cf4 \cb1 \
+\cf6 \cb3 #print(neg_list[0])\cf4 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf4 \cb3 print(\cf5 pos_counter\cf4 [\cf7 'no'\cf4 ])\cb1 \
+\cb3 print(\cf5 neg_counter\cf4 [\cf7 'no'\cf4 ])\cb1 \
+\
+\'97\cf2 \cb3 from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 neg_list\cf4 , \cf5 pos_list\cf4 , \cf5 neg_counter\cf4 , \cf5 pos_counter\cf4 \cb1 \
+\
+\cb3 print(len(\cf5 pos_list\cf4 ))\cb1 \
+\cb3 print(len(\cf5 neg_list\cf4 ))\cb1 \
+\cf5 \cb3 total_reviews\cf4 =len(\cf5 pos_list\cf4 )+len(\cf5 neg_list\cf4 )\cb1 \
+\cf5 \cb3 percent_pos\cf4 =len(\cf5 pos_list\cf4 )/\cf5 total_reviews\cf4 \cb1 \
+\cf5 \cb3 percent_neg\cf4 =len(\cf5 neg_list\cf4 )/\cf5 total_reviews\cf4 \cb1 \
+\
+\cb3 print(\cf5 percent_pos\cf4 )\cb1 \
+\cb3 print(\cf5 percent_neg\cf4 )\cb1 \
+\
+\'97\cf2 \cb3 from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 neg_counter\cf4 , \cf5 pos_counter\cf4 \cb1 \
+\
+\cf5 \cb3 review\cf4  = \cf7 "This crib was amazing"\cf4 \cb1 \
+\
+\cf5 \cb3 percent_pos\cf4  = \cf5 0.5\cf4 \cb1 \
+\cf5 \cb3 percent_neg\cf4  = \cf5 0.5\cf4 \cb1 \
+\
+\cf5 \cb3 total_pos\cf4 =sum(\cf5 pos_counter\cf4 .\cf8 values\cf4 ())\cb1 \
+\cb3 print(\cf5 total_pos\cf4 )\cb1 \
+\
+\cf5 \cb3 total_neg\cf4 =sum(\cf5 neg_counter\cf4 .\cf8 values\cf4 ())\cb1 \
+\cb3 print(\cf5 total_neg\cf4 )\cb1 \
+\
+\cf5 \cb3 pos_probability\cf4 =\cf5 1\cf4 \cb1 \
+\cf5 \cb3 neg_probability\cf4 =\cf5 1\cf4 \cb1 \
+\
+\cf5 \cb3 review_words\cf4 =\cf5 review\cf4 .\cf8 split\cf4 ()\cb1 \
+\
+\cf2 \cb3 for\cf4  \cf5 word\cf4  \cf2 in\cf4  \cf5 review_words\cf4 :\cb1 \
+\cb3   \cf5 word_in_pos\cf4 =\cf5 pos_counter\cf4 [\cf5 word\cf4 ]\cb1 \
+\cb3   \cf5 word_in_neg\cf4 =\cf5 neg_counter\cf4 [\cf5 word\cf4 ]\cb1 \
+\
+\cb3   \cf5 pos_probability\cf4 =(\cf5 pos_probability\cf4 *\cf5 word_in_pos\cf4 )/\cf5 total_pos\cf4 \cb1 \
+\cb3   \cf5 neg_probability\cf4 =(\cf5 neg_probability\cf4 *\cf5 word_in_neg\cf4 )/\cf5 total_neg\cf4 \cb1 \
+\
+\cb3 print(\cf5 pos_probability\cf4 )\cb1 \
+\cb3 print(\cf5 neg_probability\cf4 )\
+\
+\
+\'97\cf2 from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 neg_counter\cf4 , \cf5 pos_counter\cf4 \cb1 \
+\
+\cf5 \cb3 review\cf4  = \cf7 "This cribb was amazing"\cf4 \cb1 \
+\
+\cf5 \cb3 percent_pos\cf4  = \cf5 0.5\cf4 \cb1 \
+\cf5 \cb3 percent_neg\cf4  = \cf5 0.5\cf4 \cb1 \
+\
+\cf5 \cb3 total_pos\cf4  = sum(\cf5 pos_counter\cf4 .\cf8 values\cf4 ())\cb1 \
+\cf5 \cb3 total_neg\cf4  = sum(\cf5 neg_counter\cf4 .\cf8 values\cf4 ())\cb1 \
+\
+\cf5 \cb3 pos_probability\cf4  = \cf5 1\cf4 \cb1 \
+\cf5 \cb3 neg_probability\cf4  = \cf5 1\cf4 \cb1 \
+\
+\cf5 \cb3 review_words\cf4  = \cf5 review\cf4 .\cf8 split\cf4 ()\cb1 \
+\
+\cf2 \cb3 for\cf4  \cf5 word\cf4  \cf2 in\cf4  \cf5 review_words\cf4 :\cb1 \
+\cb3   \cf5 word_in_pos\cf4  = \cf5 pos_counter\cf4 [\cf5 word\cf4 ]\cb1 \
+\cb3   \cf5 word_in_neg\cf4  = \cf5 neg_counter\cf4 [\cf5 word\cf4 ]\cb1 \
+\cb3   \cb1 \
+\cb3   \cf5 pos_probability\cf4  *= (\cf5 1\cf4 +\cf5 word_in_pos\cf4 ) / (\cf5 total_pos\cf4 +len(\cf5 pos_counter\cf4 ))\cb1 \
+\cb3   \cf5 neg_probability\cf4  *= (\cf5 1\cf4 +\cf5 word_in_neg\cf4 )/ (\cf5 total_neg\cf4 +len(\cf5 neg_counter\cf4 ))\cb1 \
+\cb3   \cb1 \
+\cb3 print(\cf5 pos_probability\cf4 )\cb1 \
+\cb3 print(\cf5 neg_probability\cf4 )\
+\
+\'97\cf2 from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 neg_counter\cf4 , \cf5 pos_counter\cf4 \cb1 \
+\
+\cf5 \cb3 review\cf4  = \cf7 "This is super bad"\cf4 \cb1 \
+\
+\cf5 \cb3 percent_pos\cf4  = \cf5 0.5\cf4 \cb1 \
+\cf5 \cb3 percent_neg\cf4  = \cf5 0.5\cf4 \cb1 \
+\
+\cf5 \cb3 total_pos\cf4  = sum(\cf5 pos_counter\cf4 .\cf8 values\cf4 ())\cb1 \
+\cf5 \cb3 total_neg\cf4  = sum(\cf5 neg_counter\cf4 .\cf8 values\cf4 ())\cb1 \
+\
+\cf5 \cb3 pos_probability\cf4  = \cf5 1\cf4 \cb1 \
+\cf5 \cb3 neg_probability\cf4  = \cf5 1\cf4 \cb1 \
+\
+\cf5 \cb3 review_words\cf4  = \cf5 review\cf4 .\cf8 split\cf4 ()\cb1 \
+\
+\cf2 \cb3 for\cf4  \cf5 word\cf4  \cf2 in\cf4  \cf5 review_words\cf4 :\cb1 \
+\cb3   \cf5 word_in_pos\cf4  = \cf5 pos_counter\cf4 [\cf5 word\cf4 ]\cb1 \
+\cb3   \cf5 word_in_neg\cf4  = \cf5 neg_counter\cf4 [\cf5 word\cf4 ]\cb1 \
+\cb3   \cb1 \
+\cb3   \cf5 pos_probability\cf4  *= (\cf5 word_in_pos\cf4  + \cf5 1\cf4 ) / (\cf5 total_pos\cf4  + len(\cf5 pos_counter\cf4 ))\cb1 \
+\cb3   \cf5 neg_probability\cf4  *= (\cf5 word_in_neg\cf4  + \cf5 1\cf4 ) / (\cf5 total_neg\cf4  + len(\cf5 neg_counter\cf4 ))\cb1 \
+\
+\cf5 \cb3 final_pos\cf4 = \cf5 pos_probability\cf4 *\cf5 percent_pos\cf4 \cb1 \
+\cf5 \cb3 final_neg\cf4 = \cf5 neg_probability\cf4 *\cf5 percent_neg\cf4 \cb1 \
+\
+\cb3 print(\cf5 final_pos\cf4 )\cb1 \
+\cb3 print(\cf5 final_neg\cf4 )\cb1 \
+\
+\cf2 \cb3 if\cf4  \cf5 final_pos>final_neg\cf4 :\cb1 \
+\cb3   print(\cf7 "The review is positive"\cf4 )\cb1 \
+\cf2 \cb3 else\cf4 :\cb1 \
+\cb3   print(\cf7 "The review is negative"\cf4 )\cb1 \
+\
+\'97\cf2 \cb3 from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 neg_list\cf4 , \cf5 pos_list\cf4 \cb1 \
+\cf2 \cb3 from\cf4  \cf5 sklearn\cf4 .\cf8 feature_extraction\cf5 .\cf8 text\cf4  \cf2 import\cf4  \cf5 CountVectorizer\cf4 \cb1 \
+\
+\cf5 \cb3 review\cf4  = \cf7 "This crib was amazing"\cf4 \cb1 \
+\
+\cf5 \cb3 counter\cf4  = \cf5 CountVectorizer\cf4 ()\cb1 \
+\
+\cf5 \cb3 counter\cf4 .\cf8 fit\cf4 (\cf5 neg_list\cf4  + \cf5 pos_list\cf4 )\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb3 #print(counter.vocabulary_)\cf4 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf5 \cb3 review_counts\cf4 = \cf5 counter\cf4 .\cf8 transform\cf4 ([\cf5 review\cf4 ])\cb1 \
+\
+\pard\pardeftab720\sl440\partightenfactor0
+\cf6 \cb3 #print(review_counts.toarray())\cf4 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf5 \cb3 training_counts\cf4 =\cf5 counter\cf4 .\cf8 transform\cf4 (\cf5 neg_list\cf4  + \cf5 pos_list\cf4 )\cb1 \
+\
+\'97\cf2 \cb3 from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 counter\cf4 , \cf5 training_counts\cf4 \cb1 \
+\cf2 \cb3 from\cf4  \cf5 sklearn\cf4 .\cf8 feature_extraction\cf5 .\cf8 text\cf4  \cf2 import\cf4  \cf5 CountVectorizer\cf4 \cb1 \
+\cf2 \cb3 from\cf4  \cf5 sklearn\cf4 .\cf8 naive_bayes\cf4  \cf2 import\cf4  \cf5 MultinomialNB\cf4 \cb1 \
+\
+\cf5 \cb3 review\cf4  = \cf7 "it is super bad"\cf4 \cb1 \
+\cf5 \cb3 review_counts\cf4  = \cf5 counter\cf4 .\cf8 transform\cf4 ([\cf5 review\cf4 ])\cb1 \
+\
+\cf5 \cb3 classifier\cf4 =\cf5 MultinomialNB\cf4 ()\cb1 \
+\
+\cf5 \cb3 training_labels\cf4 =[\cf5 0\cf4 ]*\cf5 1000\cf4 +[\cf5 1\cf4 ]*\cf5 1000\cf4 \cb1 \
+\
+\cf5 \cb3 classifier\cf4 .\cf8 fit\cf4 (\cf5 training_counts\cf4 , \cf5 training_labels\cf4 )\cb1 \
+\
+\cb3 print(\cf5 classifier\cf4 .\cf8 predict\cf4 (\cf5 review_counts\cf4 ))\cb1 \
+\cb3 print(\cf5 classifier\cf4 .\cf8 predict_proba\cf4 (\cf5 review_counts\cf4 ))\cb1 \
+\
+\'97 \cf2 \cb3 from\cf4  \cf5 reviews\cf4  \cf2 import\cf4  \cf5 baby_counter\cf4 , \cf5 baby_training\cf4 , \cf5 instant_video_counter\cf4 , \cf5 instant_video_training\cf4 , \cf5 video_game_counter\cf4 , \cf5 video_game_training\cf4 \cb1 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf2 \cb3 from\cf4  \cf5 sklearn\cf4 .\cf8 feature_extraction\cf5 .\cf8 text\cf4  \cf2 import\cf4  \cf5 CountVectorizer\cf4 \cb1 \
+\cf2 \cb3 from\cf4  \cf5 sklearn\cf4 .\cf8 naive_bayes\cf4  \cf2 import\cf4  \cf5 MultinomialNB\cf4 \cb1 \
+\
+\cf5 \cb3 review\cf4  = \cf7 "this game was violent"\cf4 \cb1 \
+\
+\cf5 \cb3 baby_review_counts\cf4  = \cf5 baby_counter\cf4 .\cf8 transform\cf4 ([\cf5 review\cf4 ])\cb1 \
+\cf5 \cb3 instant_video_review_counts\cf4  = \cf5 instant_video_counter\cf4 .\cf8 transform\cf4 ([\cf5 review\cf4 ])\cb1 \
+\cf5 \cb3 video_game_review_counts\cf4  = \cf5 video_game_counter\cf4 .\cf8 transform\cf4 ([\cf5 review\cf4 ])\cb1 \
+\
+\cf5 \cb3 baby_classifier\cf4  = \cf5 MultinomialNB\cf4 ()\cb1 \
+\cf5 \cb3 instant_video_classifier\cf4  = \cf5 MultinomialNB\cf4 ()\cb1 \
+\cf5 \cb3 video_game_classifier\cf4  = \cf5 MultinomialNB\cf4 ()\cb1 \
+\
+\cf5 \cb3 baby_labels\cf4  = [\cf5 0\cf4 ] * \cf5 1000\cf4  + [\cf5 1\cf4 ] * \cf5 1000\cf4 \cb1 \
+\cf5 \cb3 instant_video_labels\cf4  = [\cf5 0\cf4 ] * \cf5 1000\cf4  + [\cf5 1\cf4 ] * \cf5 1000\cf4 \cb1 \
+\cf5 \cb3 video_game_labels\cf4  = [\cf5 0\cf4 ] * \cf5 1000\cf4  + [\cf5 1\cf4 ] * \cf5 1000\cf4 \cb1 \
+\
+\
+\cf5 \cb3 baby_classifier\cf4 .\cf8 fit\cf4 (\cf5 baby_training\cf4 , \cf5 baby_labels\cf4 )\cb1 \
+\cf5 \cb3 instant_video_classifier\cf4 .\cf8 fit\cf4 (\cf5 instant_video_training\cf4 , \cf5 instant_video_labels\cf4 )\cb1 \
+\cf5 \cb3 video_game_classifier\cf4 .\cf8 fit\cf4 (\cf5 video_game_training\cf4 , \cf5 video_game_labels\cf4 )\cb1 \
+\
+\cb3 print(\cf7 "Baby training set: "\cf4  +str(\cf5 baby_classifier\cf4 .\cf8 predict_proba\cf4 (\cf5 baby_review_counts\cf4 )))\cb1 \
+\cb3 print(\cf7 "Amazon Instant Video training set: "\cf4  + str(\cf5 instant_video_classifier\cf4 .\cf8 predict_proba\cf4 (\cf5 instant_video_review_counts\cf4 )))\cb1 \
+\cb3 print(\cf7 "Video Games training set: "\cf4  + str(\cf5 video_game_classifier\cf4 .\cf8 predict_proba\cf4 (\cf5 video_game_review_counts\cf4 )))\cb1 \
+}
